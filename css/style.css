@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Inter, sans-serif;
+}
+body{
+    background-color: #f8fafc;
+}
+
+.contact-icon{
+width: 50px;
+height: 50px;
+padding: 10px 20px;
+background-color: oklch(60.6% .25 292.717);
+}
+.hub-color{
+    color: oklch(54.1% .281 293.009);
+}
+.font-weigh{
+    font-weight: 700;
+    font-size: 25px;
+}
+.font-size{
+    font-size: 15px;
+}
+.add-btn{
+    padding: 10px 20px;
+background-color: oklch(60.6% .25 292.717);
+ transition: .3s;   
+}
+.add-btn:hover{
+   background-color: oklch(60.6% .25 292.717)!important;
+   box-shadow: 0px  10px 20px   oklch(60.056% 0.24259 293.89 / 0.378)!important;
+   transform:translateY(-5px) ; 
+
+}
+.nav-icon{
+    width: 70px;
+    height: 70px;
+    padding: 10px 10px;
+    color: oklch(55.1% .027 264.364);
+    transition: .3s;
+}
+.nav-icon:hover{
+    background-color:oklch(90.089% 0.00145 285.315) ;
+    color: black;
+}
+.cancle-btn{
+    background-color: oklch(96.7% .003 264.542);
+    transition: .3s;
+}
+.cancle-btn:hover{
+background-color: oklch(90.089% 0.00145 285.315) ;
+}
+.save-btn{
+
+ 
+background-color: oklch(60.6% .25 292.717);
+    transition: .3s;
+}
+.save-btn:hover{
+     background-color: oklch(60.6% .25 292.717)!important;
+   box-shadow: 0px  10px 20px   oklch(60.056% 0.24259 293.89 / 0.378)!important;
+   
+}
+.modal-body {
+    scrollbar-width: none;
+}
+.img-container{
+    width: 40px;
+    width: 40px;
+}
+.form-control{
+    box-shadow: none!important;
+    transition: .3s;
+}
+.form-control:focus{
+    border: 3px solid  oklch(55.088% 0.25998 291.156 / 0.378) !important;
+}
+.profile-avatar{
+    width: 80px;
+     height: 80px;
+}
+.icons-bg{
+    width: 50px;
+    height: 50px;
+
+}
+.bold{
+    font-weight: 700;
+}
+.total-div{
+    transition: .3s;
+}
+.total-div:hover{
+     box-shadow: 0 12px 24px rgba(0,0,0,.08);
+    transform: translateY(-3px);
+}
+.gray-div{
+    width: 100px;
+    height: 100px;
+    background-color: oklch(96.7% .003 264.542);
+}
+#first-litter,#first-litter-1{
+    width: 50px;
+    height: 50px;
+}
+.phone-icon {
+    width: 25px;
+    height: 25px;
+}
+.email-icon{
+     width: 25px;
+    height: 25px;
+color: oklch(54.1% .281 293.009);
+background-color:oklch(94.3% .029 294.588) ;
+}
+.location-icon{
+    width: 25px;
+    height: 25px;
+    background-color: oklch(95% .052 163.051);
+color: oklch(59.6% .145 163.225);
+}
+.bg-mail-link {
+    color: oklch(54.1% .281 293.009);
+background-color:oklch(94.3% .029 294.588) ;
+
+}
+.first-litter-fav{
+      width: 40px;
+    height: 40px;
+
+}
+
+
+
+
+.icons {
+     color: oklch(55.1% .027 264.364);
+  cursor: pointer;
+  transition:0.3s;
+}
+
+.icons i {
+  transition: 0.3s ;
+}
+
+.star-icon:hover {
+     background-color: rgba(108, 117, 125, 0.06) !important;
+}
+.star-icon:hover i {
+  color: #ffc107;
+}
+.heart-icon:hover {
+   background-color: rgba(108, 117, 125, 0.06) !important;
+}
+.heart-icon:hover  i{
+  color: #dc3545;
+}
+.edit-icon:hover {
+  background-color: rgba(13, 110, 253, 0.15) !important;
+}
+.edit-icon:hover  i  {
+  color: #0d6efd;
+}
+.del-icon:hover {
+     color: #dc3545 !important;
+    background-color: rgba(220, 53, 70, 0.242) !important;
+  
+}
+
+
+
+#first-litter {
+  position: relative !important;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+#first-litter.has-star::before {
+  content: "★";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  background-color: #f39c12;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 2;
+}
+
+#first-litter.has-heart::after {
+  content: "♥";
+  position: absolute;
+  bottom: -8px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 3;
+}
+
+ .li-bg-change {
+    background-color:#f0f0f0d4;
+
+}
+.fav-list .li-bg-change {
+    transition: .3s;
+}
+
+.fav-list .li-bg-change:hover {
+    background-color: #fff7c1d4;
+}
+
+.li-bg-change:hover .phone-bg-change {
+    color: #ffff!important;
+    background-color:oklch(58.58% 0.13028 160.997)!important;
+}
+.li-bg-change:hover .phone-bg-change i {
+    color: #ffff!important;
+   
+}

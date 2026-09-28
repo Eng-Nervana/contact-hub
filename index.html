@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="css/bootstrap-utilities.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/mediaa.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- nav -->
+<nav class="navbar navbar-expand-lg  bg-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-flex justify-content-center align-items-center gap-2 " href="#">
+        <span class="text-white me-2 contact-icon d-flex justify-content-center align-items-center rounded-4"><i class="fa-regular fa-address-book"></i></span>
+    <div class="d-flex flex-column">
+        <span class=" font-weigh"><span>Contact</span> <span class="hub-color">Hub</span></span>
+        <span class="text-muted font-size">Smart Contact Manager</span>
+    </div>
+    </a>
+     <div>
+   
+<div class="d-flex justify-content-center align-items-center">
+    <button type="button" class="btn add-btn text-white fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+ <i class="fa-solid fa-plus"></i> Add Contact
+</button>
+    <div>
+          <span class="nav-icon  rounded-3 justify-content-center align-items-center ms-2"><i class="fa-solid fa-bell"></i></span>
+    <span class="nav-icon  rounded-3 justify-content-center align-items-center  ms-2"><i class="fa-solid fa-gear"></i></span>
+ </div>
+    <div class="img-container">
+    <img src="img/avatar-4.jpg" alt="" class="rounded-3 w-100">
+ </div>
+   </div>
+  
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class=" modal-dialog modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fw-bold fs-5" id="staticBackdropLabel">Add New Contact</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body  ">
+       <div class="form-container">
+        <div class="text-center mb-4">
+          <div id="avatarContainer" class="profile-avatar mx-auto mb-2 d-flex align-items-center justify-content-center bg-primary text-white rounded-circle  overflow-hidden ">
+            <i id="defaultAvatarIcon" class="fa-solid fa-user fa-2x"></i>
+            <img id="previewImage" src="" alt="Profile Preview" class="w-100 h-100 object-fit-cover d-none">
+          </div>
+          
+          <button type="button" class="btn btn-light  rounded-3 border px-3 py-1 text-muted" >
+            <i class="fa-solid fa-camera me-1"></i> Change Photo
+          </button>
+          
+          <input type="file" id="photoInput" accept="image/*" class="d-none" >
+        </div>
+        <form >
+          <div class="mb-3">
+            <label for="full-name" class="form-label text-muted  fw-bold">Full Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control bg-light border-0 py-2" id="full-name" placeholder="Enter full name">
+          </div>
+
+          <div class="mb-3">
+            <label for="phone-num" class="form-label text-muted  fw-bold">Phone Number <span class="text-danger">*</span></label>
+            <input id="phone-num" type="tel" class="form-control bg-light border-0 py-2" placeholder="e.g., 01012345678">
+            <div id="phoneError" class="text-danger small mt-1 d-none">Please enter a valid Egyptian phone number</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label text-muted  fw-bold">Email Address</label>
+            <input id="email" type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="address" class="form-label text-muted  fw-bold">Address</label>
+            <input id="address" type="text" class="form-control bg-light border-0 py-2" placeholder="Enter address">
+          </div>
+
+          <div class="mb-3">
+            <label for="group" class="form-label text-muted  fw-bold">Group</label>
+            <select id="group" class="form-select bg-light border-0 py-2">
+              <option selected disabled>Select a group</option>
+              <option value="Family">Family</option>
+              <option value="Friends">Friends</option>
+              <option value="Work">Work</option>
+              <option value="School">School</option>
+              <option value="other">other</option>
+
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="notes" class="form-label text-muted fw-bold ">Notes</label>
+            <textarea id="notes" class="form-control bg-light border-0 py-2" placeholder="Add notes about this contact"></textarea>
+          </div>
+
+          <div class="d-flex gap-4 mb-4">
+            <div class="form-check">
+              <input  class="form-check-input shadow-none" type="checkbox" id="favoriteCheck">
+              <label class="form-check-label text-secondary small" for="favoriteCheck">
+                <i class="fa-solid fa-star text-warning"></i> Favorite
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input shadow-none" type="checkbox" id="emergencyCheck">
+              <label class="form-check-label text-secondary " for="emergencyCheck">
+                <i class="fa-solid fa-heart text-danger"></i> Emergency
+              </label>
+            </div>
+          </div>
+        </form>
+       </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <button type="button" class="btn w-50 py-2 me-2 rounded-3 cancle-btn text-dark" data-bs-dismiss="modal">Cancle</button>
+        <button type="button" id="saveBtn" class="btn  w-50 py-2 me-2 rounded-3 save-btn text-white">Save Contact</button>
+        </div>
+
+            </div>
+        </div>
+       </div>
+    </div>
+</div>   
+    </div>
+  </div>
+</div>
+     </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5 py-3 mb-2">
+    <div  class="row d-flex justify-content-between align-items-center">
+        <div class="col-6 col-lg-4 mb-3">
+<div id="total" class="total-div d-flex  bg-white p-3 rounded-3 border">
+<span class="bg-primary icons-bg rounded-3 d-flex justify-content-center align-items-center me-3">
+    <i class="fa-solid fa-users text-white"></i>
+</span>
+<div class="d-flex flex-column justify-content-center align-items-center text-center">
+<span class="text-muted fs-6">Total</span>
+<span id="totalNum" class="bold fs-4">0</span>
+</div>
+</div>
+        </div>
+         <div class="col-6 col-lg-4 mb-3">
+           <div id="favorite" class="total-div d-flex  bg-white p-3 rounded-3 border">
+<span class="bg-warning  icons-bg rounded-3 d-flex justify-content-center align-items-center me-3">
+    <i class="fa-solid fa-star text-white"></i>
+</span>
+<div class="d-flex flex-column justify-content-center align-items-center text-center">
+<span class="text-muted fs-6">Favorites</span>
+<span id="favNum" class="bold fs-4">0</span>
+</div>
+</div> 
+        </div>
+         <div class="col-6 col-lg-4 mb-3">
+            <div id="emergency" class="total-div d-flex  bg-white p-3 rounded-3 border">
+<span class=" bg-danger icons-bg rounded-3 d-flex justify-content-center align-items-center me-3">
+    <i class="fa-solid fa-heart-pulse text-white"></i>
+</span>
+<div class="d-flex flex-column justify-content-center align-items-center text-center">
+<span class="text-muted fs-6">Emergency</span>
+<span id="emergencyNum" class="bold fs-4">0</span>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="contactsContainer" class="row">
+        <div class="col-12 col-lg-8">
+<h2 class="fw-bold">All Contacts</h2>
+<p class="text-muted">Manage and organize your <span id="total-num">0</span> contacts</p>
+<div class="input-group mb-4  p-2 border rounded-4  overflow-hidden bg-white d-flex align-items-center">
+       
+       <i class="fa-solid fa-magnifying-glass text-muted "></i>
+        <input type="text" id="searchcontact" class="form-control srarch border-0 shadow-none  py-2 " placeholder="Search by name, phone, or email...">
+      </div>
+
+      <!-- 
+       <div class="d-flex flex-column justify-content-center align-items-center text-center text-muted p-2">
+            <span class="gray-div p-1  rounded-3 d-flex justify-content-center align-items-center" ><i class="fa-solid fa-address-book fs-3 "></i></span>
+            <h4>No contacts found</h4>
+            <p>Click "Add Contact" to get started</p>
+        </div>
+
+      -->
+<div class="container">
+  <div class="row">
+    <div class=" col-12 col-md-6 col-lg-6">
+  <div class="contact-info overflow-hidden d-flex flex-column bg-white  rounded border">
+<div class="d-flex ms-3  mt-3 ">
+<span id="first-litter-1" class="text-white rounded-3 bg-danger me-2 fs-3 d-flex justify-content-center align-items-center" >A</span>
+<div class="ms-3">
+<h6 id="content-name" >ali</h6>
+<div class="d-flex">
+  <span class="phone-icon bg-primary-subtle me-2 small rounded-3 d-flex justify-content-center align-items-center" >
+  <i class="fa-solid fa-phone text-primary"></i>
+</span>
+<span class="text-muted">01001225009 </span>
+</div>
+  
+</div>
+</div>
+<div class="d-flex align-items-center ms-3 ">
+  <span class="email-icon d-flex justify-content-center align-items-center me-2 mt-2 small rounded-2 text-center p-1">
+    <i class="fa-solid fa-envelope "></i>
+  </span>
+  <span class="text-muted">nervanawagdy47@gmail.com</span>
+
+</div>
+<div class="d-flex align-items-center ms-3 ">
+  <span class="location-icon  d-flex justify-content-center align-items-center me-2 mt-2 small rounded-2 text-center p-1">
+    <i class="fa-solid fa-location-dot"></i>
+  </span>
+  <span class="text-muted">egypt</span>
+
+</div>
+<div class="d-flex gap-2 small ms-3 mb-2">
+<span class="bg-primary-subtle text-primary small  p-1 rounded  mt-2 ">family</span>
+</div>
+<div class= " bg-light p-3 d-flex justify-content-between align-items-center">
+<div class=" d-flex gap-3">
+  <a href="tel:+" class="bg-success-subtle p-1 rounded ">
+    <i class="fa-solid fa-phone text-success"></i>
+  </a>
+ <a href="mailto:" class="bg-mail-link p-1  rounded ">
+   <i class="fa-solid fa-envelope "></i>
+ </a>
+</div>
+
+
+<div class="d-flex gap-2 align-items-center">
+  <span class="star-icon icons p-2 rounded bg-transparent ">  
+      <i class="fa-regular fa-star"></i>  </span>
+  <span class="heart-icon icons p-2 rounded  bg-transparent"> 
+       <i class="fa-regular fa-heart"></i> </span>
+  <span class="edit-icon icons p-2 rounded  bg-transparent">  
+     <i class="fa-solid fa-pen"></i> </span>
+  <span class="del-icon icons p-2 rounded  bg-transparent"> 
+      <i class="fa-solid fa-trash"></i> </span>
+</div>
+</div>
+</div>
+    </div>
+    <div class=" col-12 col-md-6 col-lg-6">
+  <div class="contact-info overflow-hidden d-flex flex-column bg-white  rounded border">
+<div class="d-flex ms-3  mt-3 ">
+<span id="first-litter" class="text-white rounded-3 bg-danger me-2 fs-3 d-flex justify-content-center align-items-center position-relative" >A</span>
+<div class="ms-3">
+<h6 id="content-name" >ali</h6>
+<div class="d-flex">
+  <span class="phone-icon bg-primary-subtle me-2 small rounded-3 d-flex justify-content-center align-items-center" >
+  <i class="fa-solid fa-phone text-primary"></i>
+</span>
+<span class="text-muted">01001225009 </span>
+</div>
+  
+</div>
+</div>
+<div class="d-flex align-items-center ms-3 ">
+  <span class="email-icon d-flex justify-content-center align-items-center me-2 mt-2 small rounded-2 text-center p-1">
+    <i class="fa-solid fa-envelope "></i>
+  </span>
+  <span class="text-muted">nervanawagdy47@gmail.com</span>
+
+</div>
+<div class="d-flex align-items-center ms-3 ">
+  <span class="location-icon  d-flex justify-content-center align-items-center me-2 mt-2 small rounded-2 text-center p-1">
+    <i class="fa-solid fa-location-dot"></i>
+  </span>
+  <span class="text-muted">egypt</span>
+
+</div>
+<div class="d-flex gap-2 small ms-3 mb-2">
+<span class="bg-primary-subtle text-primary small  p-1 rounded  mt-2 ">family</span>
+</div>
+<div class= " bg-light p-3 d-flex justify-content-between align-items-center">
+<div class=" d-flex gap-3">
+  <a href="tel:+" class="bg-success-subtle p-1 rounded ">
+    <i class="fa-solid fa-phone text-success"></i>
+  </a>
+ <a href="mailto:" class="bg-mail-link p-1  rounded ">
+   <i class="fa-solid fa-envelope "></i>
+ </a>
+</div>
+
+
+<div class="d-flex gap-2 align-items-center">
+  <span class="star-icon icons p-2 rounded bg-transparent ">  
+      <i class="fa-regular fa-star"></i>  </span>
+  <span class="heart-icon icons p-2 rounded  bg-transparent"> 
+       <i class="fa-regular fa-heart"></i> </span>
+  <span class="edit-icon icons p-2 rounded  bg-transparent">  
+     <i class="fa-solid fa-pen"></i> </span>
+  <span class="del-icon icons p-2 rounded  bg-transparent"> 
+      <i class="fa-solid fa-trash"></i> </span>
+</div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+
+        <div class="col-12 col-lg-4 py-5">
+          <div class="d-flex flex-column gap-4">
+             <div class="cards bg-white rounded overflow-hidden ">
+           
+<div class="d-flex align-items-center bg-warning-subtle p-2  mb-2">
+           <span class=" text-white bg-warning  icons-bg rounded-3 d-flex justify-content-center align-items-center me-3">
+    <i class="fa-solid fa-star text-white"></i>
+</span>
+<div class="d-flex flex-column  ">
+<span class="bold fs-6">Favorites</span>
+<span  class="text-muted">Quick access to starred contacts</span>
+</div>
+           </div>
+
+           <ul id="favList" class= " fav-list list-unstyled d-flex flex-column p-2">
+  <li class=" li-bg-change p-2 rounded mb-2 ">
+<div class="d-flex justify-content-between align-items-center">
+ <div class="d-flex gap-3">
+   <span class="first-litter-fav p-1 d-flex justify-content-center align-items-center rounded bg-danger text-white">A</span>
+  <div class="d-flex flex-column">
+    <span id="content-name" class="small" >ali</span>
+<span class="text-muted small">01001225009 </span>
+  </div>
+ </div>
+ <a href="tel:+" class="phone-bg-change text-decoration-none phone-icon-fav bg-success-subtle me-2 p-2 rounded-3 d-flex justify-content-center align-items-center" >
+  <i class="fa-solid fa-phone text-success"></i>
+</a>
+</div>
+</li>
+</ul>
+        </div>
+         <div class="cards bg-white rounded overflow-hidden">
+           
+<div class="d-flex align-items-center bg-danger-subtle p-2  mb-2">
+           <span class=" text-white bg-danger  icons-bg rounded-3 d-flex justify-content-center align-items-center me-3">
+    <i class="fa-solid fa-heart text-white"></i>
+</span>
+<div class="d-flex flex-column  ">
+<span class="bold fs-6"> Emergency</span>
+<span  class="text-muted">Important contacts for urgent calls</span>
+</div>
+
+           </div>
+
+           <ul id="emergencyList" class= " fav-list list-unstyled d-flex flex-column p-2">
+  <li class=" li-bg-change p-2 rounded mb-2 ">
+<div class="d-flex justify-content-between align-items-center">
+ <div class="d-flex gap-3">
+   <span class="first-litter-fav p-1 d-flex justify-content-center align-items-center rounded bg-danger text-white">A</span>
+  <div class="d-flex flex-column">
+    <span id="content-name" class="small" >ali</span>
+<span class="text-muted small">01001225009 </span>
+  </div>
+ </div>
+ <a href="tel:+" class="phone-bg-change text-decoration-none phone-icon-fav bg-success-subtle me-2 p-2 rounded-3 d-flex justify-content-center align-items-center" >
+<i class="fa-solid fa-phone text-success"></i>
+</a>
+</div>
+</li>
+</ul>
+        </div>
+          </div>
+    </div>
+
+     
+   
+</div>
+  </div>  
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
